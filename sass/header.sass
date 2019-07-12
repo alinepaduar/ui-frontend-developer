@@ -1,5 +1,8 @@
-$padding-container: 370px
+$padding-container-large: 370px
+$padding-container-middle: 190px
+$padding-container-small: 10px
 $color-menu-header: #808080
+$backgroundColor-menu-header: #141414
 
 *
     margin: 0
@@ -10,30 +13,17 @@ header
     height: 190px
 
     .header_info
-        height: 130px
         background-color: #1f1f1f
-        padding-left: $padding-container
-        padding-right: $padding-container
-        display: flex
-        flex-direction: row
-        justify-content: space-between
 
         .boas_vindas, .menu
             border-bottom: 1px solid #4d4d4d
             text-transform: uppercase
             font-weight: bold
             color: $color-menu-header
-            font-size: 12px
-            padding: 12px 0px
-            height: 12px
-            width: 40%
 
             a
                 color: #fff
                 text-decoration: none
-
-        .menu
-            text-align: right
 
             li
                 display: inline
@@ -48,5 +38,179 @@ header
                     color: #fff
 
     .header_menu
+        background-color: $backgroundColor-menu-header
+
+        .right, .left
+            text-transform: uppercase
+            font-weight: bold
+            color: $color-menu-header
+            border-bottom: 0px!important
+
+            ul
+                height: 60px
+                display: flex
+                flex-direction: row
+
+                li
+                    list-style: none
+
+                    a
+                        color: $color-menu-header
+                        transition: color 0.2s
+                        text-decoration: none
+
+                    a:hover
+                        color: #ffffff
+
+@media only screen and (min-width: 1301px)
+    .header_info
+        height: 130px
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        padding-left: $padding-container-large
+        padding-right: $padding-container-large
+
+        .boas_vindas, .menu
+            font-size: 12px
+            padding: 12px 0px
+            height: 12px
+            width: 40%
+
+        .menu
+            text-align: right
+
+    .header_menu
         height: 60px
-        background-color: #141414
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        padding-left: $padding-container-large
+        padding-right: $padding-container-large
+
+        .btn_menu
+            display: none
+
+        .right ul li
+            padding: 20px 0px 20px 40px
+
+        .left ul li
+            padding: 20px 40px 20px 0px
+
+    .menu_left
+        display: none
+
+
+@media only screen and (min-width: 800px) and (max-width: 1300px)
+    .header_info
+        height: 130px
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        padding-left: $padding-container-middle
+        padding-right: $padding-container-middle
+
+        .boas_vindas, .menu
+            border-bottom: 0px!important
+            font-size: 12px
+            padding: 12px 0px
+            height: 12px
+
+        .menu
+            text-align: left
+
+    .header_menu
+        height: 60px
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: flex-start
+        padding-left: $padding-container-middle
+        padding-right: $padding-container-middle
+
+        .right, .left
+            display: none
+
+        .btn_menu
+            display: inline!important
+            cursor: pointer
+
+            img
+                width: 40px
+
+    .menu_left
+        position: absolute
+        transition: margin-left 0.5s
+        margin-left: -300px
+        display: block
+        background-color: $backgroundColor-menu-header
+
+        li
+            list-style: none
+            padding: 20px
+
+            a
+                color: $color-menu-header
+                transition: color 0.2s
+                text-decoration: none
+
+            a:hover
+                color: #ffffff
+
+@media only screen and (max-width: 800px)
+    .header_info
+        height: 130px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        padding-left: $padding-container-small
+        padding-right: $padding-container-small
+
+        .boas_vindas, .menu
+            border-bottom: 0px!important
+            font-size: 12px
+            padding: 12px 0px
+            height: 12px
+
+        .menu
+            text-align: left
+
+    .header_menu
+        height: 60px
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: flex-start
+        padding-left: $padding-container-small
+        padding-right: $padding-container-small
+
+        .right, .left
+            display: none
+
+        .btn_menu
+            display: inline!important
+            cursor: pointer
+
+            img
+                width: 40px
+
+    .menu_left
+        position: absolute
+        margin-left: -300px
+        display: block
+        transition: margin-left 0.5s
+        background-color: $backgroundColor-menu-header
+
+        li
+            list-style: none
+            padding: 20px
+
+            a
+                color: $color-menu-header
+                transition: color 0.2s
+                text-decoration: none
+
+            a:hover
+                color: #ffffff
