@@ -1,0 +1,23 @@
+{
+  "name": "teste-bluefoot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp-sass": "^4.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alinepaduar/ui-frontend-developer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alinepaduar/ui-frontend-developer/issues"
+  },
+  "homepage": "https://github.com/alinepaduar/ui-frontend-developer#readme"
+}

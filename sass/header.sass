@@ -1,0 +1,52 @@
+$padding-container: 370px
+$color-menu-header: #808080
+
+*
+    margin: 0
+    padding: 0
+
+header
+    width: 100%
+    height: 190px
+
+    .header_info
+        height: 130px
+        background-color: #1f1f1f
+        padding-left: $padding-container
+        padding-right: $padding-container
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+
+        .boas_vindas, .menu
+            border-bottom: 1px solid #4d4d4d
+            text-transform: uppercase
+            font-weight: bold
+            color: $color-menu-header
+            font-size: 12px
+            padding: 12px 0px
+            height: 12px
+            width: 40%
+
+            a
+                color: #fff
+                text-decoration: none
+
+        .menu
+            text-align: right
+
+            li
+                display: inline
+                list-style: none
+                padding: 0px 6px
+
+                a
+                    color: $color-menu-header
+                    transition: color 0.2s
+
+                a:hover
+                    color: #fff
+
+    .header_menu
+        height: 60px
+        background-color: #141414
