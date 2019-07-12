@@ -15,6 +15,19 @@ header
     .header_info
         background-color: #1f1f1f
 
+        .acoes
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            padding-top: 25px
+
+            li
+                display: inline
+
+                img
+                    width: 30px
+
         .boas_vindas, .menu
             border-bottom: 1px solid #4d4d4d
             text-transform: uppercase
@@ -63,13 +76,23 @@ header
                         color: #ffffff
 
 @media only screen and (min-width: 1301px)
-    .header_info
-        height: 130px
+    .header_logo
+        position: absolute
         display: flex
         flex-direction: row
-        justify-content: space-between
+        align-items: center
+        left: 46%
+        top: 10px
+
+    .header_info
+        height: 130px
         padding-left: $padding-container-large
         padding-right: $padding-container-large
+
+        .informacoes
+            display: flex
+            flex-direction: row
+            justify-content: space-between
 
         .boas_vindas, .menu
             font-size: 12px
@@ -99,17 +122,30 @@ header
             padding: 20px 40px 20px 0px
 
     .menu_left
-        display: none
+        margin-left: -300px
 
 
 @media only screen and (min-width: 800px) and (max-width: 1300px)
-    .header_info
-        height: 130px
+    .header_logo
+        position: absolute
         display: flex
         flex-direction: row
-        justify-content: space-between
+        align-items: center
+        left: 82%
+        top: 135px
+
+        img
+            width: 40px
+
+    .header_info
+        height: 130px
         padding-left: $padding-container-middle
         padding-right: $padding-container-middle
+
+        .informacoes
+            display: flex
+            flex-direction: row
+            justify-content: space-between
 
         .boas_vindas, .menu
             border-bottom: 0px!important
@@ -159,14 +195,27 @@ header
                 color: #ffffff
 
 @media only screen and (max-width: 800px)
+    .header_logo
+        position: absolute
+        display: flex
+        flex-direction: row
+        align-items: center
+        left: 82%
+        top: 135px
+
+        img
+            width: 40px
+
     .header_info
         height: 130px
-        display: flex
-        flex-direction: column
-        align-items: center
-        justify-content: center
         padding-left: $padding-container-small
         padding-right: $padding-container-small
+
+        .informacoes
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
 
         .boas_vindas, .menu
             border-bottom: 0px!important
